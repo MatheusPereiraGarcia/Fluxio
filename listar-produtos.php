@@ -26,6 +26,7 @@ $resultado = mysqli_query($conexao, $sql);
     <title>Estoque</title>
     <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 
 <body>
@@ -100,6 +101,7 @@ $resultado = mysqli_query($conexao, $sql);
 
         </table>
     </div>
+    <?php require_once("footer.php"); ?>
 </body>
 
 </html>

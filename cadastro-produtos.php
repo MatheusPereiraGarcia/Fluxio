@@ -1,4 +1,3 @@
-<?php require_once("verificaAutenticacao.php"); ?>
 <?php
 //1. Conectar no BD (IP, usuário, senha, nome do banco)
 $conexao = mysqli_connect('127.0.0.1', 'root', '', 'tcc');
@@ -21,12 +20,13 @@ $resultado2 = mysqli_query($conexao, $sql2);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/principal.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Cadastro de Produto</title>
 </head>
 
 <body>
-    <?php require_once("menu2.php"); ?>
+    <?php require_once("menu.php"); ?>
     <div class="container">
 
         <?php if (isset($mensagem)) { ?>
@@ -38,20 +38,20 @@ $resultado2 = mysqli_query($conexao, $sql2);
 
         <h1 class="mt-2">Cadastro de Produtos</h1>
         <form method="post" action="cadastrar-produtos.php">
-            <div class="label-input">
+            <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
                 <input name="nome" type="text" class="form-control" id="nome" required>
             </div>
 
-            <div class="label-input">
+            <div class="mb-3">
                 <label for="nome" class="form-label">Quantidade</label>
                 <input name="quantidade" type="number" class="form-control" id="nome" required>
             </div>
-            <div class="label-input">
+            <div class="mb-3">
                 <label for="nome" class="form-label">Valor de Compra</label>
                 <input name="vlrCompra" type="number" step="0.01" class="form-control" id="nome" required>
             </div>
-            <div class="label-input">
+            <div class="mb-3">
                 <label for="nome" class="form-label">Valor de Venda</label>
                 <input name="vlrVenda" type="number" step="0.01" class="form-control" id="nome" required>
             </div>
@@ -60,9 +60,9 @@ $resultado2 = mysqli_query($conexao, $sql2);
                 <textarea name="descricao" type="text" class="form-control" id="nome" rows="5" cols="100"></textarea>
             </div>
             <br>
-            <div class="label-input">
+            <div class="mb-3">
                 <label for="nome" class="form-label">Marca</label><a href="cadastro-marca.php"
-                    class="btn btn-secondary">+</a>
+                    class="btn btn-primary btn-sm">+</a>
                 <br>
 
                 <select id="marca" name="idMarca" required>
@@ -73,9 +73,9 @@ $resultado2 = mysqli_query($conexao, $sql2);
                 </select><br><br>
 
 
-                <div class="label-input">
+                <div class="mb-3">
                     <label for="nome" class="form-label">Grupo</label><a href="cadastro-grupo.php"
-                        class="btn btn-secondary">+</a>
+                        class="btn btn-primary btn-sm">+</a>
                     <br>
                     <select id="marca" name="idGrupo" required>
                         <?php while ($linhaGrupo = mysqli_fetch_assoc($resultado2)): ?>
@@ -89,6 +89,7 @@ $resultado2 = mysqli_query($conexao, $sql2);
                     </button>
         </form>
     </div>
+    <?php require_once("footer.php"); ?>
 </body>
 
 </html>

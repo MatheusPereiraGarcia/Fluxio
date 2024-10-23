@@ -39,7 +39,7 @@ if (isset($_POST['salvar'])) {
         header("location: menu.php");
     } else {
         session_destroy();
-        header('Location:index.php');
+        header('Location:login.php');
         die();
     }
     mysqli_close($conn);

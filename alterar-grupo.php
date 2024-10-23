@@ -38,6 +38,7 @@ $categoria = mysqli_fetch_array($resultado);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Alterar Categoria</title>
 </head>
 
@@ -71,10 +72,10 @@ $categoria = mysqli_fetch_array($resultado);
             <button name="salvar" type="submit" class="btn btn-primary">
                 <i class="fa-solid fa-check"></i> Salvar
             </button>
-            <a type="button" href="grupo-listar.php" class="btn btn-warning">Voltar</a>
+            <a type="button" href="listar-grupo.php" class="btn btn-warning">Voltar</a>
         </form>
     </div>
-
+    <?php require_once("footer.php"); ?>
 
 </body>
 

@@ -53,6 +53,7 @@ $resultadoGrupo = mysqli_query($conexao, $sqlGrupo);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Alterar Produto</title>
 </head>
 
@@ -132,6 +133,7 @@ $resultadoGrupo = mysqli_query($conexao, $sqlGrupo);
             <a type="button" href="listar-produtos.php" class="btn btn-warning">Voltar</a>
         </form>
     </div>
+    <?php require_once("footer.php"); ?>
 </body>
 
 </html>
