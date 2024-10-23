@@ -1,0 +1,84 @@
+html,
+body {
+    height: 100%;
+    /* Faz o html e body ocuparem 100% da altura da tela */
+    margin: 0;
+    /* Remove margens padrão */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Coloca os elementos em coluna */
+}
+
+.container {
+    flex: 1;
+    /* Faz a container ocupar o espaço disponível */
+}
+
+footer {
+    background-color: #f8f9fa; /* Cor do fundo do rodapé */
+    padding: 20px 0; /* Espaçamento interno do rodapé */
+    width: 100%; /* Garantir que o rodapé ocupe 100% da largura */
+    position: relative; /* Para garantir que ele fique na posição correta */
+}
+
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    /* Cor da parte móvel da barra de rolagem */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a;
+    /* Cor ao passar o mouse */
+}
+
+.scrollable-area {
+    height: 300px;
+    /* Altura da área rolável */
+    overflow-y: auto;
+    /* Ativar rolagem vertical */
+    padding: 15px;
+    /* Espaçamento interno */
+    border: 1px solid #ddd;
+    /* Borda para visualizar a área */
+}
+
+#fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    /* Tamanho do botão */
+    height: 80px;
+    /* Tamanho do botão */
+    border-radius: 50%;
+    /* Formato circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    /* Tamanho do texto dentro do botão */
+}
+
+#calendar {
+    max-width: 30em;
+    /* Largura máxima do calendário */
+    margin-top: 25px;
+    /* Margem superior */
+}
