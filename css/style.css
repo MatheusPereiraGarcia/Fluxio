@@ -1,1 +1,231 @@
+html,
+body {
+    height: 100%;
+    /* Faz o html e body ocuparem 100% da altura da tela */
+    margin: 0;
+    /* Remove margens padrão */
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    /* Coloca os elementos em coluna */
+}
+
+.container {
+    flex: 1;
+    /* Faz a container ocupar o espaço disponível */
+}
+
+footer {
+    background-color: #f4f9ff;
+    /* Cor do fundo do rodapé */
+    padding: 20px 0;
+    /* Espaçamento interno do rodapé */
+    width: 100%;
+    /* Garantir que o rodapé ocupe 100% da largura */
+    position: static;
+    /* Para garantir que ele fique na posição correta */
+    z-index: -1;
+}
+
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    /* Cor da parte móvel da barra de rolagem */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a;
+    /* Cor ao passar o mouse */
+}
+
+.scrollable-area {
+    height: 300px;
+    /* Altura da área rolável */
+    overflow-y: auto;
+    /* Ativar rolagem vertical */
+    padding: 15px;
+    /* Espaçamento interno */
+    border: 1px solid #ddd;
+    /* Borda para visualizar a área */
+}
+
+#fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    z-index: 1000;
+    /* Tamanho do botão */
+    height: 80px;
+    /* Tamanho do botão */
+    border-radius: 50%;
+    /* Formato circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    /* Tamanho do texto dentro do botão */
+}
+
+#calendar {
+    max-width: 30em;
+    /* Largura máxima do calendário */
+    margin-top: 25px;
+    /* Margem superior */
+}
+
+.botao-primario {
+    background-color: #8c96ee;
+    /* Cor de fundo primária */
+    border: none;
+    padding: 0.5em 1em;
+    margin-bottom: 0.3rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    transition: 0.3s;
+    /* Transição suave */
+    display: block;
+    /* Para que o botão ocupe toda a largura */
+    font-family: 'Arial', sans-serif;
+    /* Altere para a fonte desejada */
+    font-size: 15px;
+    /* Tamanho da fonte (opcional) */
+}
+
+.botao-secundario {
+    background-color: #6c757d;
+    /* Cor de fundo secundária */
+    border: none;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.botao-excluir {
+    background-color: #ff6f6f;
+    border: none;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Botão Alterar */
+.botao-alterar {
+    background-color: #8c96ee;
+    border: none;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.botao-primario:hover {
+    background-color: #7a82ce;
+    /* Cor ao passar o mouse */
+}
+
+.botao-secundario:hover {
+    background-color: #929ea8;
+    /* Cor de fundo secundária */
+    text-decoration: none;
+}
+
+.botao-excluir:hover {
+    background-color: #e55d5d;
+    /* Cor mais intensa ao passar o mouse */
+}
+
+.botao-alterar:hover {
+    background-color: #a6aff2;
+    /* Cor mais clara ao passar o mouse */
+}
+
+.botao-primary {
+    color: #fff;
+    /* Cor do texto do botão */
+    background-color: #8c96ee;
+    /* Cor de fundo do botão */
+    border-color: #8c96ee;
+    /* Cor da borda do botão */
+    text-decoration: none;
+}
+
+.botao-primary:hover {
+    color: #fff;
+    /* Cor do texto ao passar o mouse */
+    background-color: #a6aff2;
+    /* Cor de fundo ao passar o mouse */
+    border-color: #a6aff2;
+    /* Cor da borda ao passar o mouse */
+}
+
+.botao-primary:focus {
+    box-shadow: 0 0 0 0.2rem #a6aff2;
+    /* Cor da sombra ao focar no botão */
+}
+
+.botao-primary:active {
+    color: #fff;
+    /* Cor do texto quando o botão está pressionado */
+    background-color: #7b82c9;
+    /* Cor de fundo quando o botão está pressionado */
+    border-color: #7b82c9;
+    /* Cor da borda quando o botão está pressionado */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    /* Sombra do botão pressionado */
+}
+
+.botao-primary:disabled {
+    color: #fff;
+    /* Cor do texto quando o botão estiver desativado */
+    background-color: #7b82c9;
+    /* Cor de fundo do botão desativado */
+    border-color: #c0c8f7;
+    /* Cor da borda do botão desativado */
+}
+
+.botao-sm {
+    padding: 0.3rem 0.6rem;
+    /* Padding do botão pequeno */
+    font-size: 0.875rem;
+    /* Tamanho da fonte do botão pequeno */
+    border-radius: 0.3rem;
+    /* Bordas arredondadas para o botão pequeno */
+}

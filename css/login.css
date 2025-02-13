@@ -1,0 +1,262 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #dae0fb;
+}
+/* Main container styling */
+main {
+    font-family: Arial, sans-serif;
+    background-color: #dae0fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Altura padrão */
+    transition: height 0.3s ease; /* Transição suave para ajuste de altura */
+}
+
+/* Flex container for centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login box style */
+.login-box {
+    display: flex;
+    width: 900px;
+    height: 700px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Left side of the login box */
+.left {
+    background-color: #c0c8f7;
+    width: 40%;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for the left image */
+.left img {
+    height: 15em;
+    width: 15em;
+    margin-bottom: 3em;
+}
+
+.left h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.left p {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Estilo para o link "Esqueci minha senha" */
+.left a {
+    color: #8C96EE; /* Cor do texto padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold;
+    text-decoration: none; /* Remover o sublinhado */
+    margin-top: 10px; /* Espaço acima do link */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+
+}
+
+/* Efeito ao passar o mouse sobre o link */
+.left a:hover {
+    font-weight: bold;
+    color: #f4f9ff; /* Cor do texto quando o mouse passa por cima */
+}
+
+/* Efeito ao focar no link (quando ele é clicado) */
+.left a:focus {
+    font-weight: bold;
+    color: #f4f9ff; /* Cor ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Right side of the login box */
+.right {
+    background-color: #ffffff;
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* User image styling */
+.right .imagem-usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .imagem-usuario img {
+    height: 15em;
+    width: 15em;
+    margin-bottom: 0.5em;
+}
+
+.right h2 {
+    color: #a6aff2;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Form container */
+.right form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input fields */
+.right .input-login {
+    margin-bottom: 15px;
+    padding: 13px;
+    font-size: 1em;
+    border: 0.15em solid #9ca1f1;
+    border-radius: 5px;
+}
+
+.right .input-login:hover {
+    margin-bottom: 15px;
+    padding: 13px;
+    font-size: 1em;
+    border: 0.15em solid #797ece;
+    border-radius: 5px;
+}
+
+.right .input-login:focus {
+    margin-bottom: 15px;
+    padding: 13px;
+    font-size: 1em;
+    border: 0.15em solid #dae0fb;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Submit button styling */
+.right .input-enviar-login {
+    background-color: #a6aff2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.right .input-enviar-login:hover {
+    background-color: #8893eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.right .input-enviar-login:focus {
+    background-color: #8893eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilo para o alerta de sucesso */
+.alert-success {
+    width: 100%;
+    max-width: 900px; /* Same width as the login box */
+    margin: 20px auto;  /* Center the alert and add space on the top */
+    padding: 15px;
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Border color matching the background */
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+/* Estilo para o alerta de erro (danger) */
+.alert-danger {
+    width: 100%;
+    max-width: 900px; /* Same width as the login box */
+    margin: 20px auto;  /* Center the alert and add space on the top */
+    padding: 15px;
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Border color matching the background */
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+/* Additional styling for both success and danger alerts */
+.alert p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* Optional hover effect for alert boxes (optional) */
+.alert:hover {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo para o link "Cadastre-se" */
+.right p {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 14px;
+}
+
+.right p a {
+    color: #8C96EE;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.right p a:hover {
+    color: #f4f9ff;
+}
+/* Estilo para o link "Voltar" */
+.voltar-link-resenha {
+    display: inline-block;
+    background-color: #a6aff2; /* Cor do fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura do botão */
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: background-color 0.3s ease; /* Transição suave na cor */
+}
+
+.voltar-link-resenha:hover {
+    background-color: #8893eb; /* Cor ao passar o mouse */
+}
+

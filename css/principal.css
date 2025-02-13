@@ -1,0 +1,252 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(247, 247, 247);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu styles */
+.header {
+    width: 100%;
+    margin-bottom: -3em;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 30px 0px;
+    width: 100%;
+    position: fixed; /* Fixa o menu no topo */
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+}
+
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.dropdown-menu.show {
+    display: block; /* Mostra o dropdown quando a classe "show" está presente */
+}
+
+.dropdown-menu .dropdown-item {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #555;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Form and alert styles */
+.container {
+    display: block;
+    flex-direction: column; /* Alinha elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 80%;
+    max-width: 1000px;
+    margin: 15em 5em 5em 25em;
+
+}
+
+.titulo-1 {
+    font-size: 2.5em; /* Ajuste o tamanho do título */
+    margin-bottom: 0.5em;
+    align-self: flex-start;
+}
+
+.label-input {
+    margin-bottom: 15px;
+}
+
+.label-input label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 1em; /* cima direita baixo esquerda */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+    font-family: 'Arial', sans-serif; /* Altere para a fonte desejada */
+    font-size: 16px; /* Tamanho da fonte (opcional) */
+    color: #333; /* Cor do texto (opcional) */
+}
+
+
+.form-control:focus {
+    border-color: #007bff; /* Cor ao focar no input */
+    box-shadow: 0 0 0.5em rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+    outline: none; /* Remove a borda padrão */
+}
+
+.form-control:hover {
+    border-color: #007bff; /* Cor ao passar o mouse */
+}
+.botao-primario {
+    background-color: #8c96ee; /* Cor de fundo primária */
+    border: none;
+    padding: 1em 1.5em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: 0.3s; /* Transição suave */
+    display: block; /* Para que o botão ocupe toda a largura */
+    font-family: 'Arial', sans-serif; /* Altere para a fonte desejada */
+    font-size: 15px; /* Tamanho da fonte (opcional) */
+    --bs-btn-color: #fff; /* Cor do texto do botão */
+    --bs-btn-bg: #8c96ee; /* Cor de fundo do botão */
+    --bs-btn-border-color: #8c96ee; /* Cor da borda do botão */
+    --bs-btn-hover-color: #fff; /* Cor do texto ao passar o mouse */
+    --bs-btn-hover-bg: #a6aff2; /* Cor de fundo ao passar o mouse */
+    --bs-btn-hover-border-color: #a6aff2; /* Cor da borda ao passar o mouse */
+    --bs-btn-focus-shadow-rgb: 49, 132, 253; /* Cor da sombra ao focar no botão */
+    --bs-btn-active-color: #fff; /* Cor do texto quando o botão está pressionado */
+    --bs-btn-active-bg: #7b82c9; /* Cor de fundo quando o botão está pressionado */
+    --bs-btn-active-border-color: #7b82c9; /* Cor da borda quando o botão está pressionado */
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Sombra do botão pressionado */
+    --bs-btn-disabled-color: #fff; /* Cor do texto quando o botão estiver desativado */
+    --bs-btn-disabled-bg: #7b82c9; /* Cor de fundo do botão desativado */
+    --bs-btn-disabled-border-color: #c0c8f7; /* Cor da borda do botão desativado */
+}
+
+.botao-secundario {
+    background-color: #6c757d; /* Cor de fundo secundária */
+    border: none;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.botao-primario:hover, .botao-secundario:hover {
+    background-color: #8c96ee; /* Cor ao passar o mouse */
+}
+
+
+.alert {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto da mensagem de alerta */
+}
+
+
+/*teste scrollbar*/
+
+/* Estilos para Chrome/Safari */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d5006d; /* Cor do polegar (rosa) */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c40052; /* Cor do polegar ao passar o mouse */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da faixa */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Estilos para Firefox */
+html {
+    scrollbar-width: thin; /* Espessura da barra de rolagem */
+    scrollbar-color: #d5006d #f1f1f1; /* Cor do polegar e da faixa */
+}
